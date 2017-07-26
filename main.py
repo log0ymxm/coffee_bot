@@ -7,9 +7,9 @@ import redis
 from smartplug import SmartPlug
 
 REDIS_URL = os.environ.get('REDIS_URL', 'localhost')
-PLUG_IP = '172.16.100.75'
-PLUG_USER = 'admin'
-PLUG_PW = '1234'
+PLUG_IP = os.environ.get('PLUG_IP', '172.16.100.75')
+PLUG_USER = os.environ.get('PLUG_USER', 'admin')
+PLUG_PW = os.environ.get('PLUG_PW', '1234')
 
 # Regularly log current & power draw so we can estimate
 # a heuristic rule for when the coffee is finished after
